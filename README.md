@@ -22,34 +22,35 @@ Key characteristics of the setting:
 
 ## Approach
 
-1. Demand Modeling
+### 1. Demand Modeling
 
 - Historical daily demand analyzed for distributional fit and independence.
 - Separate demand distributions estimated by weekday.
 - Mean and variance estimated from historical data.
 
-2. Policy Design
-   Production policies were defined as offsets from expected demand:
+### 2. Policy Design
+
+Production policies were defined as offsets from expected demand:
 
 - Offset values evaluated: -20, -10, 0, +10, +20 units
 
 Negative offsets prioritize waste reduction.
+
 Positive offsets prioritize service level.
 
-3. Simulation Framework
-   Monte Carlo simulation of one full year of daily demand
+### 3. Simulation Framework
 
-2,000 annual replications per policy
-
-Performance metrics calculated for each offset:
-
-- Annual profit
-- Stockout rate
-- Fill rate
-- Average leftover inventory per day
+- Monte Carlo simulation of one full year of daily demand
+- 2,000 annual replications per policy
+- Performance metrics calculated for each offset:
+  - Annual profit
+  - Stockout rate
+  - Fill rate
+  - Average leftover inventory per day
 
 All simulation logic is implemented in:
-src/newsvendor_simulation.py
+
+`src/newsvendor_simulation.py`
 
 ## Results
 
@@ -59,27 +60,22 @@ Offset = 0
 
 This policy produced:
 
-Highest expected annual profit
-
-Balanced tradeoff between stockout risk and waste
-
-Service level above 97%
+- Highest expected annual profit
+- Balanced tradeoff between stockout risk and waste
+- Service level above 97%
 
 As offset increases:
 
-Stockout rate decreases monotonically
+- Stockout rate decreases monotonically
+- Fill rate increases and saturates
+- Waste increases substantially
+- Profit declines beyond the optimal point
 
-Fill rate increases and saturates
-
-Waste increases substantially
-
-Profit declines beyond the optimal point
-
-This confirms the economic intuition of the newsvendor model:
-increasing service beyond the profit-maximizing level introduces diminishing returns.
+This confirms the economic intuition of the newsvendor model that increasing service beyond the profit-maximizing level introduces diminishing returns.
 
 Detailed results are available in:
-results/simulation_summary.xlsx
+
+`results/simulation_summary.xlsx`
 
 ## Key Takeaways
 
@@ -95,7 +91,7 @@ results/simulation_summary.xlsx
 - pandas
 - SciPy
 
-Dependencies are listed in requirements.txt
+Dependencies are listed in `requirements.txt`
 
 ## Potential Extensions
 
