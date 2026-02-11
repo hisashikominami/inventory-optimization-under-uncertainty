@@ -52,6 +52,8 @@ All simulation logic is implemented in:
 
 `src/newsvendor_simulation.py`
 
+The full analytical workflow, including parameter configuration, data preparation, and result generation, is available in the `notebooks/ directory.
+
 ## Results
 
 The optimal production policy was:
