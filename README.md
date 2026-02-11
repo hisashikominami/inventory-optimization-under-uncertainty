@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project applies a classical **newsvendor framework** and Monte Carlo simulation to determine optimal daily production levels under uncertain and perishable demand. The objective is to quantify the tradeoff between stockouts (lost sales) and excess inventory (waste) and identify the production policy that maximizes expected annual profit.
+This project applies a classical **newsvendor framework** and Monte Carlo simulation to determine optimal daily production levels under uncertain demand and perishable inventory. The objective is to quantify the tradeoff between stockouts (lost sales) and excess inventory (waste) and identify the production policy that maximizes expected annual profit.
 
 ## Problem Definition
 
@@ -10,9 +10,9 @@ A pizzeria produces fresh dough daily. Because dough is perishable and cannot be
 
 The key decision problem:
 
-What daily production offset relative to expected demand maximizes expected annual profit while balancing service performance and waste?
+_What daily production offset relative to expected demand maximizes expected annual profit while balancing service performance and waste?_
 
-Key characteristics of the setting:
+Key characteristics/assumptions of the setting:
 
 - One year of historical transactional demand data
 - Demand approximately normally distributed
