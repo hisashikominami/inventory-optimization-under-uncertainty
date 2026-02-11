@@ -10,7 +10,7 @@ A pizzeria produces fresh dough daily. Because dough is perishable and cannot be
 
 The key decision problem:
 
-_What daily production offset relative to expected demand maximizes expected annual profit while balancing service performance and waste?_
+_What daily production level relative to expected demand maximizes expected annual profit while balancing service performance and waste?_
 
 Key characteristics/assumptions of the setting:
 
@@ -52,7 +52,7 @@ All simulation logic is implemented in:
 
 `src/newsvendor_simulation.py`
 
-The full analytical workflow, including parameter configuration, data preparation, and result generation, is available in the `notebooks/ directory.
+The full analytical workflow, including parameter configuration, data preparation, and result generation, is available in the `notebooks/` directory.
 
 ## Results
 
